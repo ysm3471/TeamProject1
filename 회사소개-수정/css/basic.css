@@ -1,0 +1,109 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body {font-family: 'GmarketSansMedium',Arial, Helvetica, sans-serif;
+    width: 100%;}
+
+html {scroll-behavior: smooth;}
+
+/********************** visual ********************************/
+
+.visual {
+    position:relative;
+}
+.visual_txt {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size:38px;
+    color:white;
+    opacity:0;
+    transition: all 2s;
+    
+}
+.visual_txt.active {    
+    opacity:1;
+    top:43%
+}
+.visual_video {
+    width:100%;
+}
+video {
+    width: 100%;
+}
+
+/********************** section1 ********************************/
+
+
+.big_bg_wrap {
+    width: 100%;
+    position: relative;
+    top: -400px;
+}
+.bg_wrap {    
+    background: url('../img/bg_img.png') center top / cover;
+    width: 100%;
+    height: 6000px;
+    border: 5px solid red;
+    top: 300px;
+    position: absolute;
+}
+section {
+    width: 100%;
+}
+.sec1 {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+}
+.sec1_img {
+    margin-bottom: 60px;
+    
+}
+.sec1_txt {
+    
+    border: 1px solid #000;
+    
+    line-height: 28px;
+    margin-top: 100px;
+    
+}
+
+.ani_txt {
+opacity: 0;  transform: translateY(100%); transition:1s 1s;
+}
+.ani_txt.on {
+    opacity: 1;transform: translateY(0%);
+}
+
+
+.mobile {
+    display: none;
+}
+.sec1_p1 {
+    font-weight: 300;
+}
+.sec1_p2 {
+    font-weight: bold;
+}
+.sec1_p3 {
+    font-size: 27px;
+    margin-top: 80px;
+}
+.sec1_p4 {
+    margin-top: 100px; 
+}
+.sec1_p4 > img {
+    display: inline-block;
+    width: 260px;
+}
+
+/********************** section2 ********************************/
+
+

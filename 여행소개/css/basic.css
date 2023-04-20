@@ -1,0 +1,126 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body {font-family: 'GmarketSansMedium',Arial, Helvetica, sans-serif;
+    width: 100%; color:#333; font-size: 16px;}
+a {color:#333}
+
+html {scroll-behavior: smooth;}
+
+
+header {
+    display: flex;
+    width: 100%;
+    height: 130px;
+    background: #000;
+}
+
+/********************** visual ********************************/
+
+
+.img-container {
+    overflow:hidden;
+}
+.img-inner {
+    width: 300vw;
+    height: 90vh;    
+    overflow:hidden;
+    transition: .5S;
+}
+.img-inner >div {
+    width: 100vw;
+    float: left;
+}
+.img-inner >div >img {
+    width: 100%;
+    left:0;
+    object-fit: contain;
+}
+.btn_wrap {    
+    text-align: center;
+    margin-top: -20px;      
+}
+.btn_wrap > button {
+    width: 150px;
+    height: 20px;
+    margin-top: 60px;
+    margin-left: 30px;
+    cursor: pointer;
+    background: #BB2649 ;
+    border: none;
+    color: #fff;
+    border-radius: 3px;
+}
+
+
+
+/********************** sec1 ********************************/
+
+.sec_wrap {
+    width: 100%;
+}
+.sec1 {
+    width: 1600px;
+    margin: auto;
+    margin-top: 200px;
+}
+.sec1 > p {}
+.circle {}
+.cir_ul {
+    margin-top: 100px;
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.cir_li {
+    position: relative;
+    width: 170px;
+    height: 170px;    
+    background: #ccc;
+    border-radius: 50%;
+}
+.cir_li > a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 13px;
+    line-height: 20px;
+}
+.cir_p {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************** section2 ********************************/
+
+

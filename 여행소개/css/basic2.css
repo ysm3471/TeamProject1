@@ -1,0 +1,64 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body {font-family: 'GmarketSansMedium',Arial, Helvetica, sans-serif;
+    width: 100%; color:#333}
+
+html {scroll-behavior: smooth;}
+
+/********************** visual ********************************/
+
+main {
+    width:100%;
+}
+.img-wrap {
+    width:100%;
+}
+.img-container {
+    width:1920px;
+    overflow:hidden;
+}
+.img-inner {
+    position:absolute;
+
+    width: 5760px;
+    display:flex;
+}
+.img-inner >div {
+    width: 1920px;
+    float: left;
+    transition: .5S;
+}
+.img-inner >div >img {
+    width: 100%;
+    left:0;
+    object-fit: contain;
+}
+.btn_wrap {    
+    text-align: center;
+    width: 600px;    
+    margin: auto;  
+    transition: .5s;  
+}
+.btn_wrap > button {
+    width: 150px;
+    height: 20px;
+    margin-top: 60px;
+    margin-left: 30px;
+    cursor: pointer;
+    background: #BB2649 ;
+    border: none;
+    color: #fff;
+    border-radius: 3px;
+}
+/********************** section1 ********************************/
+
+
+
+/********************** section2 ********************************/
+
+

@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+@media (max-width:1550px){
+    .cir_ul {
+        width: 100%;
+        margin-top: 100px;            
+    }
+    .cir_li {
+        position: relative;        
+        width: 170px;
+        height: 170px;          
+        background: #ccc;
+        border-radius: 50%;
+    }
+}
+
+
+@media (max-width:1450px){
+    .sec1 {
+        width: 1300px;
+    }
+    .circle {
+        width: 1300px;
+        margin:auto; 
+    }
+    .cir_ul {
+        width: 100%;                 
+    }
+}
+
+
+
+@media (max-width:1200px){
+    .pc {
+        display: none;
+    }
+    .mobile {
+        display: block;        
+        width: 100%;
+    }
+    .btn_wrap > button {
+        position: absolute;
+        width: 20px;
+        height: 70px;        
+        border-radius: 5px;    
+        margin-top: 220px; 
+    }
+    .slideBtn1 {
+        top: 50px;
+        left: 0;
+    }
+    .slideBtn2 {
+        top: 143px;
+        left: 0;
+    }
+    .slideBtn3 {
+        bottom: 433px;
+        left: 0;
+        top: 237px;
+}
+.sec1 {
+    width: 1000px;
+}
+.circle {
+    width: 1000px;
+    margin:auto; 
+}
+.cir_ul {
+    width: 100%;                 
+}
+.sec_wrap {
+    position: relative;
+    top:-150px
+}
+}
+
+@media (max-width:1000px){
+    .cir_li {
+        border-radius: 30px;
+        width: 130px;
+        height: 130px;
+    }
+    .sec_wrap {
+        position: relative;
+        top:-350px
+    }
+    .sec1 {
+        width: 800px;
+    }
+    .circle {
+        width: 800px;
+        margin:auto; 
+    }
+    .cir_ul {
+        width: 100%;                 
+    }
+}
+
+
+@media (max-width:00px){
+    .sec1_txt {
+        width: 100%;
+        font-size: 12px;
+        margin: auto;        
+    }
+    .btn_wrap > button {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;     
+        
+            
+    }
+    .slideBtn1 {
+        bottom: 70%;
+    line-height: 20px;
+    }
+    .slideBtn2 {
+        top: 10%;
+        line-height: 20px;
+    }
+    .slideBtn3 {
+        top: 130px;
+        left: 0;
+        line-height: 20px;
+    }
+    
+}
