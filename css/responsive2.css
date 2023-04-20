@@ -1,0 +1,31 @@
+@charset "UTF-8"; 
+
+@media (max-width:1200px) {
+
+  
+}
+
+@media (max-width:991px) {
+  .container {
+    padding:0 15px;  
+  }
+  .banner_img a {
+    height:228px;
+  }
+  .banner_img img {
+   
+  }
+}
+@media (max-width:780px) {
+  .banner_img a {
+    height:178px;
+  }
+}
+@media (max-width:630px) {
+  .banner_img a {
+    height:148px;
+  }
+}
+@media (max-width:480px) {
+  
+}
