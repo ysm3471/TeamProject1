@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reservation Calendar</title>
+  <style>
+    /* 캘린더 스타일링 */
+    .calendar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .calendar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 500px;
+    }
+    .calendar-days {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      width: 100%;
+      max-width: 500px;
+    }
+    .day {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      border: 1px solid gray;
+    }
+    .day.selectable {
+      cursor: pointer;
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <div class="calendar">
+    <div class="calendar-header">
+      <button class="prev-month">&lt;</button>
+      <h2 id="calendar-title"></h2>
+      <button class="next-month">&gt;</button>
+    </div>
+    <div class="calendar-days"></div>
+  </div>
+  <script>
+    let currentDate = new Date();
+let currentYear = currentDate.getFullYear();
+let currentMonth = currentDate.getMonth();
+
+function getMonthDays(year, month) {
+  const firstDay = new Date(year, month, 1);
+  const lastDay = new Date(year, month + 1, 0);
+  return [firstDay, lastDay];
+}
+
+function drawCalendar() {
+  const [firstDay, lastDay] = getMonthDays(currentYear, currentMonth);
+  const calendarDays = document.querySelector(".calendar-days");
+  calendarDays.innerHTML = "";
+
+  for (let i = 1; i <= lastDay.getDate(); i++) {
+    const day = new Date(currentYear, currentMonth, i);
+    const isSelectable = day >= currentDate;
+    const classNames = `day ${isSelectable ? "selectable" : ""}`;
+    const dayEl = document.createElement("div");
+    dayEl.classList = classNames;
+    dayEl.innerHTML = i;
+    calendarDays.appendChild(dayEl);
+  }
+}
+
+drawCalendar();
+
+document.addEventListener("click", (event) => {
+  if (event.target.classList.contains("selectable")) {
+    // 선택 가능한 날짜를 클릭한 경우
+    const selectedDate = new Date(
+      currentYear,
+      currentMonth,
+      event.target.innerHTML
+    );
+    console.log(selectedDate); // 선택한 날짜 처리
+  } else if (event.target.classList.contains("prev-month")) {
+    // 이전 달 버튼을 클릭한 경우
+    currentMonth--;
+    if (currentMonth < 0) {
+      currentMonth = 11;
+      currentYear--;
+    }
+    createCalendar()
+    // 위에서 작성한 자바스크립트 코드
+  </script>
+</body>
+</html>
