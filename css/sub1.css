@@ -24,24 +24,38 @@ header {
 .title h1 {
   text-align:center;
   font-size:28px;
-  margin-bottom:200px;
-  font-weight:300;
+  margin-bottom:120px;
+  font-weight:400;
 }
 
 /* category */
 .category_wrap {
-  padding:0 15px;
+  padding:15px 15px;
   border-bottom:1px solid #d9d9d9;
+  height:60px;
+}
+.categorys h3 {
+  margin-right:80px;
+  float:left;
+  line-height:30px;
+  color:#7B7B7B;
+}
+.categorys ul {
+  float:left;
 }
 .categorys li {
   display:inline-block;
-  margin:0 40px 25px 0;
+  margin-right:40px;
   font-weight:400;
+  line-height:30px;
 }
-.categorys li:first-child {
-  margin-right:80px
+.categorys li:hover {
+  font-weight:700;
+  letter-spacing:-0.07px;  /* 사이즈가 변해도 다른 li들이 밀리지않음. 근데 이래도 되나 */
 }
-
+.categorys li a {
+  color:#333;
+}
 /* sel_category */
 .sel_category {
   padding:25px 15px 60px 15px;
@@ -110,16 +124,24 @@ header {
 .content_text {
   padding:0 15px;
   font-weight:300;
+  position:relative;
 }
-.content_text p:not(:last-child) {
+.content_text p {
   margin-bottom:12px
 }
 .content_text .distance {
   color:#847E7E;
   font-size:16px;
 }
-.content_text .hash_tag {
+.content_text .hash_tag a{
   color:#47B1FE;
+}
+.content_text .hash_tag a:hover {
+  font-weight:400;
+  letter-spacing:-0.07px;
+}
+.content_text .booking_btn {
+  display:none;
 }
 
 /* footer */

@@ -1,10 +1,5 @@
 @charset "UTF-8"; 
 
-@media (max-width:1200px) {
-
-  
-}
-
 @media (max-width:991px) {
   .container {
     padding:0 15px;  
@@ -12,11 +7,14 @@
   .banner_img a {
     height:228px;
   }
-  .banner_img img {
-   
-  }
 }
 @media (max-width:780px) {
+  .title {
+    margin-bottom:30px;
+  }
+  .title h1 {
+    font-size:35px;
+  }
   .banner_img a {
     height:178px;
   }
@@ -26,6 +24,35 @@
     height:148px;
   }
 }
-@media (max-width:480px) {
-  
+@media (max-width:520px) {
+  /* title */
+  .title h1 {
+    font-size:28px;
+  }
+
+  /* banner */
+  .banner {
+    padding-bottom:15px;
+    margin-bottom:30px;
+  }
+  .banner_img {
+    margin-bottom:10px;
+  }
+  .banner_img a {
+    height:108px;
+  }
+  .banner_txt h3 {
+    margin-bottom:10px;
+    font-size:14px;
+    font-weight:400;
+  }
+  .banner_txt p {
+    font-size:10px;
+    color:#847E7E;
+  }
+}
+@media (max-width:380px) {
+  .banner_img a {
+    height:78px;
+  }
 }
