@@ -9,6 +9,9 @@
   }
 }
 @media (max-width:780px) {
+  main {
+    margin:70px 0;
+  }
   .title {
     margin-bottom:30px;
   }
@@ -25,6 +28,9 @@
   }
 }
 @media (max-width:520px) {
+  main {
+    margin-top:50px;
+  }
   /* title */
   .title h1 {
     font-size:28px;

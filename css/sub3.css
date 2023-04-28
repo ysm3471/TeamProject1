@@ -6,14 +6,11 @@ body {
   font-size:17px;
 }
 
-header {
-  height:150px;
-  background:gray;
-  margin-bottom:100px;
-}
 
 /* main */
-
+main {
+  margin:100px 0;
+}
 /* width */
 .container {
   max-width:1200px;
@@ -71,10 +68,4 @@ header {
 .banner_txt p {
   font-size:14px;
   color:#847E7E;
-}
-/* footer */
-footer {
-  margin-top:100px;
-  height: 200px;
-  background:#847E7E;
 }

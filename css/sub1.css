@@ -6,18 +6,16 @@ body {
   font-size:17px;
 }
 
-header {
-  height:150px;
-  background:gray;
-  margin-bottom:100px;
-}
-
 /* main */
-
+main {
+  margin-bottom:120px;
+}
 /* width */
 #container {
+  padding-top:100px;
   max-width:1200px;
   margin:auto;
+  position:relative;
 }
 
 /* title */
@@ -39,6 +37,10 @@ header {
   float:left;
   line-height:30px;
   color:#7B7B7B;
+  cursor:default;
+}
+.mb_slide {
+  overflow:visible;
 }
 .categorys ul {
   float:left;
@@ -49,12 +51,17 @@ header {
   font-weight:400;
   line-height:30px;
 }
+
 .categorys li:hover {
   font-weight:700;
   letter-spacing:-0.07px;  /* 사이즈가 변해도 다른 li들이 밀리지않음. 근데 이래도 되나 */
 }
 .categorys li a {
   color:#333;
+}
+.categorys li a.active {
+  font-weight:700;
+  letter-spacing:-0.07px;
 }
 /* sel_category */
 .sel_category {
@@ -63,10 +70,12 @@ header {
 .sel_category li {
   position:relative;
   display:inline-block;
+  margin:0 43px 13px 0;
   border-bottom:1.5px solid #48BFF1;
 }
 .sel_category li a {
-  color:#48BFF1
+  color:#48BFF1;
+  vertical-align:middle;
 }
   /* cancle_btn */
   .cancle_btn {   
@@ -77,6 +86,7 @@ header {
     height:16px;
     border-radius:100%;
     background:rgba(218,211,211,0.5);
+    cursor:pointer;
   }
   .cancle_btn::after, .cancle_btn::before {
     position:absolute;
@@ -92,7 +102,21 @@ header {
   .cancle_btn::before {
     transform:rotate(135deg);
   }
-
+/* sort_category */
+.sort_wrap {
+  position:absolute;
+  right:10px;
+  top:180px;
+}
+select {
+  width:130px;
+  border-radius:5px;
+  border:1px solid #747474;
+  padding:3px;
+}
+select:focus {
+  outline:none;
+}
 /* contents */
 
 .contents {   
@@ -101,33 +125,86 @@ header {
   grid-gap:30px 25px;
   grid-template-columns:repeat(3,1fr) ;
 }
-.content {
-  border-bottom:1px rgba(218,211,211,0.3) solid;
-  padding-bottom:25px;
-  margin-bottom:10px;
-}
-.content_img_wrap {
-  width:100%;
-  height:358px;
-  margin-bottom:30px;
-}
-.content_img {
-  width:100%;
-  height:100%;
-}
-.content_img img {
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  border-radius:20px;
-}
+  /* slider */
+  .swiper {
+    width: 100%;
+    border-bottom:1px rgba(218,211,211,0.3) solid;
+    padding-bottom:25px;
+    margin-bottom:10px;
+  }
+  .swiper.hide {
+    display:none;
+  }
+  .swiper-wrapper {
+    height: 358px;
+    margin-bottom:30px;
+  }
+  .swiper-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-slide img {
+    display: block;
+    width: 99.6%;   
+    /* swiper 플러그인은 width를 소수점 제외하고 계산해주기 때문에 미묘한 차이가 발생. grid 때문인지 다른 이유가 있는지는 모르겠음 */
+    height: 100%;
+    object-fit: cover;
+    border-radius:20px;
+  }
+  .swiper-pagination {
+    top:338px !important;
+    left:calc(50% - 7px) !important;
+  }
+  .swiper-pagination-bullet {
+    background:rgba(255,255,255,1);
+    opacity:0.7;
+  }
+  .swiper-pagination-bullet-active {
+    background:#fff;
+    left:0;
+    opacity:1;
+  }
+  .swiper-button-next, .swiper-button-prev {
+    top:40%;
+    color:#fff;
+    width:32px;
+    height:32px;
+    background:#fff;
+    border-radius:100%;
+    opacity:0;
+    transition:.2s;
+  }
+  .swiper-wrapper:hover ~ .swiper-button-next, .swiper-wrapper:hover ~ .swiper-button-prev {   /* 형제관계에 hover를 사용할 때는 ~를 사용 */
+    opacity:.7;
+  }
+  .swiper-button-next::after, .swiper-button-prev::after {
+    font-size:13px;
+    font-weight:bold;
+    color:#333;
+  }
+  .swiper-button-prev:hover, .swiper-button-next:hover {
+    transform:scale(1.03);
+    opacity:1;
+  }
+  .swiper-button-disabled {
+    display:none;
+  }
+
 .content_text {
   padding:0 15px;
   font-weight:300;
   position:relative;
+  z-index:200;
 }
+
 .content_text p {
-  margin-bottom:12px
+  margin-bottom:12px;
+  cursor:default;
+}
+.content_text .country {
+  cursor:pointer;
 }
 .content_text .distance {
   color:#847E7E;
@@ -142,11 +219,4 @@ header {
 }
 .content_text .booking_btn {
   display:none;
-}
-
-/* footer */
-footer {
-  margin-top:100px;
-  height: 200px;
-  background:#847E7E;
 }

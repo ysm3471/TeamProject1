@@ -42,4 +42,4 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-a { text-decoration:none; } /* 추가 */
+a { text-decoration:none; color:inherit } /* 추가 */
