@@ -77,11 +77,11 @@ function addCategory(e) {   // li 복사
     li.append(a, cancleBtn);
 
     // selCategory를 만들 때 클릭 이벤트 생성
-    li.addEventListener('click', (e) => {   
-      e.target.parentNode.remove();  // 누르면 삭제됨
-      selCategoryList = filterLi(selCategoryList,e.target.textContent);   // 기록에서도 삭제
+    li.addEventListener('click', () => {   
+      li.remove();  // 누르면 삭제됨
+      selCategoryList = filterLi(selCategoryList,a.textContent);   // 기록에서도 삭제
       classRemove(item);    // 선택된 카테고리 효과 삭제
-      arrContent(e);    // content 재정렬
+      arrContent(a);    // content 재정렬       
     });
 
     // selCategory에 요소 추가
@@ -103,8 +103,8 @@ function addCategory(e) {   // li 복사
 }
 
 // content를 정렬하는 함수
-function arrContent(e) {
-  const selItem = e.target;
+function arrContent(selItem) {
+
   const selItemValue = selItem.dataset.value;
 
   content.forEach(function(aa) {    // 정렬 전에 클래스 초기화
@@ -137,13 +137,13 @@ function arrContent(e) {
 categorys.forEach(function(item) {
   item.addEventListener('click', (e) => {
     addCategory(e);
-    arrContent(e);
+    arrContent(e.target);
   });
 })
 contentTag.forEach(function(item) {
   item.addEventListener('click',(e) => {
     addCategory(e);
-    arrContent(e);
+    arrContent(e.target);
     container.scrollIntoView({behavior:'smooth'});   // 누르면 title이 있는 곳으로 화면 이동
   });
 })
