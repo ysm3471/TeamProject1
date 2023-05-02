@@ -13,6 +13,7 @@
   <script src="js/prefixfree.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script defer src="js/sub1.js"></script>
+  <script defer type="module" src="js/sub2-2.js"></script>
 </head>
 <body>
   <header>
@@ -307,9 +308,16 @@
           </ul>
         </div>
       </div>   
+      <div class="sort_wrap">
+        <select class="sort_category">
+          <option value="default">추천순</option>
+          <option value="distance">가까운 거리부터</option>
+          <option value="country">이름순</option>
+        </select>        
+      </div>
       <div class="contents_wrap">
         <div class="contents">
-          <div class="swiper mySwiper" data-category="all lake island">
+          <div class="swiper mySwiper" data-category="all lake island" data-country="Swiss" data-distance="11449">
             <div class="swiper-wrapper">
               <div class="swiper-slide"><img src="img/sub2/swiss-1.jpg" alt=""></div>
               <div class="swiper-slide"><img src="img/sub2/swiss-2.jpg" alt=""></div>
@@ -329,7 +337,7 @@
               <a href="#" class="booking_btn">예약하러 가기 ></a>
             </div>
           </div>
-          <div class="swiper mySwiper" data-category="all island sea">
+          <div class="swiper mySwiper" data-category="all island sea" data-country="Okinawa" data-distance="1267">
             <div class="swiper-wrapper">
               <div class="swiper-slide"><img src="img/sub2/okinawa-1.jpg" alt=""></div>
               <div class="swiper-slide"><img src="img/sub2/okinawa-2.jpg" alt=""></div>
@@ -349,7 +357,7 @@
               <a href="#" class="booking_btn">예약하러 가기 ></a>
             </div>
           </div>
-          <div class="swiper mySwiper" data-category="all sakura tour nightView">
+          <div class="swiper mySwiper" data-category="all sakura tour nightView" data-country="Tokyo" data-distance="1194">
             <div class="swiper-wrapper">
               <div class="swiper-slide"><img src="img/sub2/tokyo-1.jpg" alt=""></div>
               <div class="swiper-slide"><img src="img/sub2/tokyo-2.jpg" alt=""></div>
@@ -370,7 +378,7 @@
               <a href="#" class="booking_btn">예약하러 가기 ></a>
             </div>
           </div>
-          <div class="swiper mySwiper" data-category="all tour">
+          <div class="swiper mySwiper" data-category="all tour" data-country="France" data-distance="9491">
             <div class="swiper-wrapper">
               <div class="swiper-slide"><img src="img/sub2/paris-1.jpeg" alt=""></div>
               <div class="swiper-slide"><img src="img/sub2/paris-2.jpg" alt=""></div>
@@ -388,7 +396,7 @@
               <a href="#" class="booking_btn">예약하러 가기 ></a>
             </div>
           </div>
-          <div class="swiper mySwiper" data-category="all island">
+          <div class="swiper mySwiper" data-category="all island" data-country="Hawaii" data-distance="7655">
             <div class="swiper-wrapper">
               <div class="swiper-slide"><img src="img/sub2/hwaii-1.jpg" alt=""></div>
               <div class="swiper-slide"><img src="img/sub2/hwaii-1.jpg" alt=""></div>
@@ -409,7 +417,6 @@
           </div>
         </div>
       </div>       
-      .  
     </div>
 
   </main>

@@ -1,4 +1,4 @@
-import products from "../json/sub1.json" assert {type: "json"};
+import products from "../json/sub2.json" assert {type: "json"};
 
 const sortProduct = [];   // 정렬된 값을 지정할 장소. 
 
@@ -7,15 +7,13 @@ for (let key in products.data) {
 }
 
 
-const sortBtn = document.querySelector('.sort_category');   // select 변수에 할당
+const sortBtn = document.querySelector('.sort_category');
 
-// 거리순으로 정렬해주는 함수
-function sortDist(products) {   
+function sortDist(products) {
   products.sort((a, b) => {
     return a.distance - b.distance;
   })
 }
-// 이름순으로 정렬해주는 함수
 function sortCountry(products) {
   products.sort(function (a, b) {
     if (a.country < b.country) {
@@ -30,7 +28,6 @@ function sortCountry(products) {
   })
 }
 
-// select한 value에 따라 정렬해주는 함수
 function sortCategory(e) {
   const contentBox = document.querySelector('.contents');
   const content = document.querySelectorAll('.swiper');
